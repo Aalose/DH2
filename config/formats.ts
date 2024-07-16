@@ -27,6 +27,25 @@ export const Formats: FormatList = [
 		// name: "gen9petmods",
 	},
 	{
+		name: "[Gen 9] Aawinmons",
+		desc: `<b>Aawinmons</b>: A metagame made up of Pokemon made through Python`,
+		mod: 'aawinmons'
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Species Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		banlist: ['Arena Trap', 'Baton Pass', 'Shadow Tag', 'Moody'],
+		
+		onValidateTeam(team, format) {
+			/**@type {{[k: string]: true}} */
+			let speciesTable = {};
+			for (const set of team) {
+				let template = this.dex.species.get(set.species);
+				if (speciesTable[template.id]) {
+					return ["You are limited to one of each Pokémon by Species Clause (except for different formes). ", "You have more than one " + template.id + "."];
+				}
+				speciesTable[template.id] = true;
+			}
+		},
+	},
+		{
 		name: "[Gen 9] Alternatium EX",
 		desc: `<b>Alternatium EX</b>: A metagame made up of only Pokemon with alternate forms exist, with all of them being seperate and unique Pokemon.`,
 		threads: [
