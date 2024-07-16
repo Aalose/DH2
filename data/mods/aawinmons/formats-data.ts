@@ -5692,6 +5692,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 		natDexTier: "OU",
 	},
+	molescuub: {
+        tier: "OU",
+        doublesTier: "DOU",
+        natDexTier: "OU",
+    },
 	missingno: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
