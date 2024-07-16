@@ -18442,6 +18442,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		tags: ["Mythical"],
 		eggGroups: ["Undiscovered"],
 	},
+	molescuub: {
+        num: 3000,
+        name: "Molescuub",
+        types: ["Normal", "Ghost"],
+        baseStats: {hp: 70, atk: 97, def: 117, spa: 70, spd: 60, spe: 101},
+        abilities: {0: "Earth Eater", 1: "Sharpness", H: "Honey Gather"},
+        heightm: 1.5,
+        weightkg: 48,
+        color: "Purple",
+        eggGroups: ["Field"],
+    },
 	missingno: {
 		num: 0,
 		name: "MissingNo.",
